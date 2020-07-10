@@ -7,3 +7,4 @@ class Person(models.Model):
 class Todo(models.Model):
     person = models.ForeignKey(Person, on_delete = models.CASCADE)
     text = models.CharField(max_length=350)
+    ittodo = models.IntegerField()

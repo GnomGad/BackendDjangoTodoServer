@@ -8,9 +8,9 @@
 {% if todos.count > 0 %}
     <h2>Список todo</h2>
     <table>
-        <tr><th>Id</th><th>Заметка</th><th>Владелец</th></tr>
+        <tr><th>Id</th><th>Id todo</th><th>Заметка</th><th>Владелец</th></tr>
         {% for todo in todos %}
-        <tr><td>{{ todo.id }}</td><td>{{ todo.text }}</td><td>{{ todo.person_id }}</td></tr>
+        <tr><td>{{ todo.id }}</td><td>{{ todo.ittodo }}</td><td>{{ todo.text }}</td><td>{{ todo.person_id }}</td></tr>
         {% endfor %}
     </table>
     {% endif %}

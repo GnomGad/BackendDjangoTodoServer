@@ -9,20 +9,26 @@
 ------------
 ##### Добавление юзера
 Создает json пару и отправляет по POST запросу на сервер по адресу
-`curl -d id=1  http://127.0.0.1:8000/person`
+`curl -d id=1  http://127.0.0.1:8000/person/`
 ```json
 {"id": "1"}
 ```
 ------------
 #####  Добавление задачи
 Создает json пару и отправляет по POST запросу на сервер по адресу
-`curl -d text="how does this work?" -d person_id="1"  http://127.0.0.1:8000/todo`
+`curl -d text="how does this work?" -d person_id="1"  http://127.0.0.1:8000/todo/`
 ```json
   {
     "text":"how does this work?",
     "person_id":"1"
     }
 ```
+------------
+
+#####  Удаление задачи
+Создает json пару и отправляет по POST запросу на сервер по адресу
+`curl -X DELETE http://127.0.0.1:8000/todo/1/1/`
+удаляет goto  с person_id/idtodo
 ------------
 #### Запуск сервера
 Запустить run.bat файл
@@ -34,4 +40,5 @@
 - person/ -`Выводит всех Person`
 - todo/ -`Выводит все Todo`
 - person/id/ - `Выводит все Todo с id Person`
+- todo/person_id/idtodo/ - `Для DELETE запроса, удаляет тодо с id человека и id заметки`
 

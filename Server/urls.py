@@ -23,4 +23,5 @@ urlpatterns = [
     path('person/', views.person),
     path('todo/', views.todo),
     path('person/<int:id>/', views.todoperson),
+    path('todo/<int:person_id>/<int:idtodo>/', views.tododel),
 ]
