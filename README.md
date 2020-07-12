@@ -16,10 +16,11 @@
 ------------
 #####  Добавление задачи
 Создает json пару и отправляет по POST запросу на сервер по адресу
-`curl -d text="how does this work?" -d person_id="1"  http://127.0.0.1:8000/todo/`
+`curl -d text="how does this work?" -d ittodo="15" -d person_id="1"  http://127.0.0.1:8000/todo/`
 ```json
   {
     "text":"how does this work?",
+    "ittodo":"15",
     "person_id":"1"
     }
 ```
@@ -29,7 +30,7 @@
 
 Создает json пару и отправляет по POST запросу на сервер по адресу
 `curl -X DELETE http://127.0.0.1:8000/todo/1/1/`
-удаляет goto  с person_id/idtodo
+удаляет goto  с person_id/ittodo
 
 ------------
 
